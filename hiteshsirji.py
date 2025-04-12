@@ -1,7 +1,7 @@
 from google import genai
-
-client = genai.Client(api_key="YOUR_API_KEY")
-
+from google.genai import types
+ 
+client = genai.Client(api_key='AIzaSyCiS9KtJBOHlDNMr3QPnquLhWWWkFTP5CM')
 
 
 System_prompt = """
