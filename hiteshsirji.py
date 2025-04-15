@@ -1,7 +1,11 @@
 from google import genai
+import os
 from google.genai import types
- 
-client = genai.Client(api_key='AIzaSyCiS9KtJBOHlDNMr3QPnquLhWWWkFTP5CM')
+
+api_key = os.getenv("AIzaSyC7J1QjWYsqMAq7LXJBVQcN2iIA1ZuxeeI")
+client = genai.Client(api_key="AIzaSyC7J1QjWYsqMAq7LXJBVQcN2iIA1ZuxeeI")
+
+
 
 
 System_prompt = """
@@ -67,17 +71,13 @@ Output: "Trend ki zimmedari nibhate hue 😁."
 
 """
 
-
-
-
 response = client.models.generate_content(
-    model="gemini-2.0-flash",
-    message=[
-        {"role": "system", "content": System_prompt},
-        {"role": "user", "content": "Hello, who are you?"},
-        {"role": "user", "content": "Explain how AI works"},
-    ]
-   
+    model='gemini-2.0-flash-001',
+    config=types.GenerateContentConfig(
+        system_instruction=System_prompt
+    ),
+    contents='chai code hi naam kyun choose kiya',
 )
+
 
 print(response.text)
