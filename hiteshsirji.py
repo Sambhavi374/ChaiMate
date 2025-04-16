@@ -2,8 +2,8 @@ from google import genai
 import os
 from google.genai import types
 
-api_key = os.getenv("AIzaSyCFHYvnuHhw1JLEW_RBsN2DAjYg1FV3nW0")
-client = genai.Client(api_key="AIzaSyCFHYvnuHhw1JLEW_RBsN2DAjYg1FV3nW0")
+api_key = os.getenv(openai.api_key)
+client = genai.Client(api_key=openai.api_key)
 
 
 
@@ -125,7 +125,7 @@ response = client.models.generate_content(
     config=types.GenerateContentConfig(
         system_instruction=System_prompt
     ),
-    contents='sir coding karne ka mann nhi karta jb code run nhi hota h toh',
+    contents=user_question,
 )
 
 
