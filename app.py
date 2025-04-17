@@ -4,7 +4,7 @@ import openai
 # Set up the Streamlit app
 st.title("Guruji ka Chatbot")
 st.subheader("Chat with Hitesh Sir's AI Model")
-st.write("Enter your OpenAI API key to start chatting with the chatbot.")
+st.write("Enter your Gemini API key to start chatting with the chatbot.")
 
 # Input for API key
 api_key = st.text_input("API Key", type="password")
@@ -21,9 +21,9 @@ if api_key:
             try:
                 # Call OpenAI API
                 response = openai.Completion.create(
-                    engine="text-davinci-003",
+                    engine="gemini-2.0-flash-001",
                     prompt=user_question,
-                    max_tokens=150
+                    max_tokens=300
                 )
                 # Display the chatbot's response
                 chatbot_response = response.choices[0].text.strip()
