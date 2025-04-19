@@ -3,8 +3,11 @@ from openai import OpenAI
 import os
 from google.genai import types
 
-api_key = os.getenv("AIzaSyBTvS95vXzfPfZPwSP4AJZ-Xvy3I4UuUGI")
-client = genai.Client(api_key="AIzaSyBTvS95vXzfPfZPwSP4AJZ-Xvy3I4UuUGI")
+from dotenv import load_dotenv
+load_dotenv()
+# Load environment variables from .env file
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+client = genai.Client(api_key="OPENAI_API_KEY")
 
 
 
