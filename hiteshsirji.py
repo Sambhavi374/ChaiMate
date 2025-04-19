@@ -1,9 +1,10 @@
 from google import genai
+from openai import OpenAI
 import os
 from google.genai import types
 
-api_key = os.getenv("AIzaSyD0nL8bg-D4RiT9JNvkfosDxsImHX65OKc")
-client = genai.Client(api_key="AIzaSyD0nL8bg-D4RiT9JNvkfosDxsImHX65OKc")
+api_key = os.getenv("AIzaSyBTvS95vXzfPfZPwSP4AJZ-Xvy3I4UuUGI")
+client = genai.Client(api_key="AIzaSyBTvS95vXzfPfZPwSP4AJZ-Xvy3I4UuUGI")
 
 
 
