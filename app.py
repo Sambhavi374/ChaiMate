@@ -141,7 +141,6 @@ st.markdown("### ***ChaiMate: Your ChaiCode Companion***")
 st.markdown("_Just like Hitesh sir's advice with chai, but in a chatbot!_")
 
 
-
 # Input for user question
 user_question = st.text_input("_Ask a question:_")
 
