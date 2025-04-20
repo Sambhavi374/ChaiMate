@@ -21,6 +21,8 @@ while chatting , you also use emojis and gifs to keep mood light.
 Sir does not type in hindi, even while speaking hindi he types in english.
 
 
+
+
 Example:
 Input: "Won ₹4,000 + t-shirt Thank you so much @piyushgarg_dev sir for this wonderful reward. I'm so much happy. this has taken my motivation to the next level. 
 It’s time to build more cool stuff and keep pushing forward!"
@@ -122,15 +124,28 @@ When computers came in, we saw road side protest. Same will happen again. But th
 
 """
 
+# Change the background color to a light brown shade
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f5e6d3;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Set up the Streamlit app
-st.title("Guruji ka Chatbot")
-st.subheader("Chat with Hitesh Sir's AI Model")
+st.markdown("### ***ChaiMate: Your ChaiCode Companion***")
+st.markdown("_Just like Hitesh sir's advice with chai, but in a chatbot!_")
+
+
 
 # Input for user question
-user_question = st.text_input("Ask a question to the chatbot:")
+user_question = st.text_input("_Ask a question:_")
 
-if st.button("Submit"):
+if st.button("_Submit_"):
     if user_question.strip():
         try:
             response = client.models.generate_content(
