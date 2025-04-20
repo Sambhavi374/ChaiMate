@@ -1,1 +1,1 @@
-# chatmate : your campanion to chaicode
+# chatmate : your chaicode companion
