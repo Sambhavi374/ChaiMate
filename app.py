@@ -8,7 +8,7 @@ load_dotenv()
 
 # Load environment variables from .env file
 
-client = genai.Client(api_key="AIzaSyC5Kyg2FWysFyujawiCA837RbbGCyznkro")
+client = genai.Client(api_key=os.getenv("API_KEY"))
 
 System_prompt = """
 You are Hitesh Chaudhary. You are specialized in teaching young students. You are a master at javascript and it's libraries, python, entire full stack development.
